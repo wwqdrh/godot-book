@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2ji3q1jnaw73"]
+
+[ext_resource type="PackedScene" uid="uid://veq1b2kv0ouj" path="res://background.tscn" id="1_snewc"]
+[ext_resource type="Script" path="res://main.gd" id="1_xwmk4"]
+[ext_resource type="PackedScene" uid="uid://cn7724js3ak4n" path="res://player.tscn" id="2_ftdgq"]
+[ext_resource type="PackedScene" uid="uid://qy420q3qlh6d" path="res://countdown.tscn" id="3_r7s1l"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_xwmk4")
+
+[node name="Background" parent="." instance=ExtResource("1_snewc")]
+
+[node name="Player" parent="." instance=ExtResource("2_ftdgq")]
+position = Vector2(112, 298)
+
+[node name="Countdown" parent="." instance=ExtResource("3_r7s1l")]
+position = Vector2(11, 2)
+
+[node name="UILose" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Label" type="Label" parent="UILose"]
+process_mode = 3
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 89.0
+offset_top = 716.0
+offset_right = 809.0
+offset_bottom = 885.0
+theme_override_font_sizes/font_size = 120
+text = "请重新挑战吧"

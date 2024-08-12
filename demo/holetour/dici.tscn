@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://l4ty2xmlje04"]
+
+[ext_resource type="Texture2D" uid="uid://cp2d3wmklo7vr" path="res://assets/dici .png" id="1_b2352"]
+[ext_resource type="Script" path="res://dici.gd" id="1_ynm1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h5dp"]
+size = Vector2(96, 69)
+
+[node name="Dici" type="Area2D"]
+collision_layer = 7
+script = ExtResource("1_ynm1h")
+
+[node name="Dici" type="Sprite2D" parent="."]
+position = Vector2(-40, -2)
+texture = ExtResource("1_b2352")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-47, -1)
+scale = Vector2(4.65, 3.35)
+enable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-44, -2.5)
+shape = SubResource("RectangleShape2D_6h5dp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

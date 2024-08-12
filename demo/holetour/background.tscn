@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://veq1b2kv0ouj"]
+
+[ext_resource type="Texture2D" uid="uid://bbfhj7qdkai60" path="res://assets/GameBG.png" id="1_glnnq"]
+[ext_resource type="Script" path="res://background.gd" id="1_r2auk"]
+[ext_resource type="Texture2D" uid="uid://d1iocqjiox6kx" path="res://assets/wall.png" id="2_m403i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbcrg"]
+size = Vector2(66, 1609)
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_r2auk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="GameBg" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(449.5, 802.5)
+scale = Vector2(1.43281, 1.66562)
+texture = ExtResource("1_glnnq")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -9
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 1600)
+
+[node name="Wall" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = 1
+position = Vector2(450.5, 805)
+scale = Vector2(1.39844, 1.675)
+texture = ExtResource("2_m403i")
+
+[node name="LeftDici" type="Marker2D" parent="."]
+position = Vector2(62, 1594)
+
+[node name="RightDici" type="Marker2D" parent="."]
+position = Vector2(833, 1596)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(23, 794.5)
+shape = SubResource("RectangleShape2D_hbcrg")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(865, 800)
+shape = SubResource("RectangleShape2D_hbcrg")
