@@ -1,0 +1,20 @@
+[book]
+authors = ["wwqdrh"]
+language = "en"
+multilingual = false
+src = "src"
+
+[build]
+build-dir = "build"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[output]
+
+[output.html]
+default-theme = "light"
+additional-css = ['src/css/style.css', "./mdbook-admonish.css"]
+additional-js = ['src/js/style.js']
+git-repository-url = "https://github.com/wwqdrh/godot-book"
