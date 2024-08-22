@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # 使用shader实现屏幕震动效果
 
 <img data-id="20240608183709" src="https://cdn.ipfsscan.io/weibo/large/005ZoLfCgy1hqi4qbh6ncj30vw0hrkbn.jpg" alt="shader屏幕震动效果示例" />

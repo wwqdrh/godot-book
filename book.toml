@@ -16,5 +16,5 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 [output.html]
 default-theme = "light"
 additional-css = ['src/css/style.css', "./mdbook-admonish.css"]
-additional-js = ['src/js/style.js']
+additional-js = ['src/js/style.js', "./theme/highlight.js"]
 git-repository-url = "https://github.com/wwqdrh/godot-book"

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # 如何将godot3项目转为godot4
 
 - `onready`修改为`@onready`
