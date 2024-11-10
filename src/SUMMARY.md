@@ -22,6 +22,7 @@
     - [用Light2D实现遮罩动画](./godot3/用Light2D实现遮罩动画.md)
 
 - [godot4示例](./godot4/Start.md)
+    - [cpuparticles属性一览](./godot4/cpuparticles属性一览.md)
     - [3D场景中如何控制物体的移动](./godot4/3D场景中如何控制物体的移动.md)
     - [3D场景中物体的自动寻路](./godot4/3D场景中物体的自动寻路.md)
     - [3D基础场景的搭建](./godot4/3D基础场景的搭建.md)
